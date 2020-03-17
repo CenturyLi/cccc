@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../css/add.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../css/tailwind.min.css">
+
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap-select.min.js"></script>
+    <script src="../js/head_message.js"></script>
+
+    <title>添加商品</title>
+</head>
+<body>
+    <div class="global" id="global">
+        <div class="a">
+            <div class="a1">
+                <div class="a11">
+                    <ul class="ax">
+                        <li class="a111">
+                            <a class="label" title="首页" href="../index.html">首页</a>
+                        </li>
+                        <li class="a111">
+                            <a class="label" title="我的商品" href="../html/login.html">我的商品</a>
+                        </li>
+                        <li class="a111">
+                            <a class="label" title="我有建议" href="">我有建议</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a11" id="rig">
+                    <ul class="ax">
+                        <li class="a111" id="hove">
+                            <!--<a class="label" title="用户名" href="html/login.html" id="user-name-label">用户名</a>-->
+                            <a href="../html/login.html">
+                                <img src="../img/user_img/0.jpg" class="img-circle" style="margin: 0 auto;">
+                            </a>
+                            <div class="appear" id="app">
+                                <img class="appear-son-gif" src="../img/haipa.gif"/>
+                                <div class="appear-son-button">
+                                    <a href="../html/login.html" >
+                                        <input class="btn btn-default" value="登录" style="width: 240px;"/>
+                                    </a>
+                                </div>
+                                <div class="register-index">还没有账号？
+                                    <a title="注册" href="../html/register.html">立即注册</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a111">
+                            <input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker" type="color" data-id="bg-color" name="Background" style="width: 42px;height: 42px"/>
+                        </li>
+                        <li class="a111" id="set">
+                            <a class="label" title="我有商品" href="../html/add.html">我有商品</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="cm-middle">
+            <div style="width: 100%; height: 150px;"></div>
+            <div class="cm-middle-son">
+                <div class="cm-middle-son">
+                    <div class="cm-middle-all">
+                        <div class="cm-middle-left">
+                            <div class="cm-middle-row">
+                                <label class="cm-middle-label">商品名：</label>
+                                <div class="cm-middle-input">
+                                    <input type="text" class="form-control ch" placeholder="商品名">
+                                </div>
+                            </div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row">
+                                <label class="cm-middle-label">现价：</label>
+                                <div class="cm-middle-input">
+                                    <input type="text" class="form-control ch" placeholder="价格">
+                                </div>
+                            </div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row">
+                                <label class="cm-middle-label">原价：</label>
+                                <div class="cm-middle-input">
+                                    <input type="text" class="form-control ch" placeholder="价格">
+                                </div>
+                            </div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row">
+                                <label class="cm-middle-label">商品类别 ：</label>
+                                <select class="selectpicker">
+                                    <option value="1">资料</option>
+                                    <option value="2">数码</option>
+                                    <option value="0" selected="selected">其他</option>
+                                </select>
+                            </div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row">
+                                <label class="cm-middle-label">简介：</label>
+                                <div class="cm-middle-input">
+                                    <textarea class="form-control th" rows="5" placeholder="简介"></textarea>
+                                </div>
+                            </div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row-useless"></div>
+                            <div class="cm-middle-row-useless">
+                                <div class="cm-middle-row-useless-left"></div>
+                                <div class="cm-middle-row-useless-right" id="Tips" style="color: #ac2925;"></div>
+                            </div>
+                            <div class="cm-middle-row">
+                                <button type="button" class="btn btn-default cm-middle-submit">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cm-middle-all">
+                        <div class="cm-middle-right" id="tp">点击此处上传商品图片
+
+                        </div>
+                        <input type="file" title="点击此处上传头像" id="file" onchange="show(this)" style="height: 238px;width: 298px;position:relative;top: -238px;opacity: 0;"/>
+                        <!--opacity: 0;透明-->
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+
+                            });
+
+                            function show(file){
+                                var reader = new FileReader();	// 实例化一个FileReader对象，用于读取文件
+                                var tp = document.getElementById('tp'); 	// 获取要显示图片的标签
+                                tp.innerHTML = "<img id=\"img\" src=\"\">";
+                                var img = document.getElementById('img'); 	// 获取要显示图片的标签
+                                //读取File对象的数据
+                                reader.onload = function(evt){
+                                    img.width  =  "300";
+                                    img.height =  "360";
+                                    img.src = evt.target.result;
+                                };
+                                reader.readAsDataURL(file.files[0]);
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="a" style="text-align: center;">
+        <span class="cm-button-span">此网站仅供学习无任何商业用途</span>
+        <span class="cm-button-span">黄山学院软件小组</span>
+    </div>
+<script type="text/javascript" src="../js/add.js"></script>
+</body>
+</html>

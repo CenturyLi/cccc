@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../css/logon.css" rel="stylesheet" />
+    <link href="../css/header.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/tailwind.min.css">
+
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <title>注册</title>
+</head>
+<body>
+    <div class="global" id="global">
+        <div class="a">
+            <div class="a1">
+                <div class="a11">
+                    <ul class="ax">
+                        <li class="a111">
+                            <a class="label" title="首页" href="../index.html">首页</a>
+                        </li>
+                        <li class="a111">
+                            <a class="label" title="我的商品" href="../html/login.html">我的商品</a>
+                        </li>
+                        <li class="a111">
+                            <a class="label" title="我有建议" href="">我有建议</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="a11" id="rig">
+                    <ul class="ax">
+                        <li class="a111" id="hove">
+                            <!--<a class="label" title="用户名" href="html/login.html" id="user-name-label">用户名</a>-->
+                            <a href="../html/login.html">
+                                <img src="../img/user_img/0.jpg" class="img-circle" style="margin: 0 auto;">
+                            </a>
+                            <div class="appear" id="app">
+                                <img class="appear-son-gif" src="../img/haipa.gif"/>
+                                <div class="appear-son-button">
+                                    <a href="../html/login.html" >
+                                        <input class="btn btn-default" value="登录" style="width: 240px;"/>
+                                    </a>
+                                </div>
+                                <div class="register-index">还没有账号？
+                                    <a title="注册" href="../html/register.html">立即注册</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="a111">
+                            <input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker" type="color" data-id="bg-color" name="Background" style="width: 42px;height: 42px"/>
+                        </li>
+                        <li class="a111" id="set">
+                            <a class="label" title="我有商品" href="../html/add.html">我有商品</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="b">
+            <div class="b1"></div>
+            <div class="b2">
+                <div class="b3">
+                    <div class="b5">
+                        <div class="b51">
+                            <div class="b55">
+
+                            <!--这是一个ajax-->
+                                <div class="b53">
+                                    <input id="yhnc" type="text" class="form-control inp" placeholder="用户昵称(给自己起一个名字吧)">
+                                </div>
+                                <div class="b54" id="in_1" style="color: #ac2925;"></div>
+                                <div class="b53">
+                                    <input id="mm" type="password" class="form-control inp" placeholder="密码">
+                                </div>
+                                <div class="b54" id="in_2" style="color: #ac2925;"></div>
+                                <div class="b53">
+                                    <input id="xh" type="text" class="form-control inp" placeholder="学号">
+                                </div>
+                                <div class="b54" id="in_3" style="color: #ac2925;"></div>
+                                <div class="b53">
+                                    <input id="lxfs" type="text" class="form-control inp" placeholder="联系方式:QQ/电话">
+                                </div>
+                                <div class="b54" id="in_4" style="color: #ac2925;"></div>
+                                <div style="position: relative;">
+                                    <div class="b57" id="tp">点击此处上传头像
+
+                                    </div>
+                                    <input type="file" value="请选择文件" id="file" onchange="show(this)" style="height: 200px;width: 200px;position:absolute;top: 0px;opacity: 0;"/>
+                                </div>
+                                <!--<div class="b57" id="tp">点击此处上传头像-->
+
+                                <!--</div>-->
+                                <!--<input type="file" value="请选择文件" id="file" onchange="show(this)" style="height: 200px;width: 376px;position:relative;top: -196px;opacity: 0;"/>-->
+                                <script type="text/javascript">
+                                    $(document).ready(function () {
+
+                                    });
+
+                                    function show(file){
+                                        var reader = new FileReader();	// 实例化一个FileReader对象，用于读取文件
+                                        var tp = document.getElementById('tp'); 	// 获取要显示图片的标签
+                                        tp.innerHTML = "<img id=\"img\" src=\"\" style='width: 376px;height: 196px'>";
+                                        var img = document.getElementById('img'); 	// 获取要显示图片的标签
+                                        //读取File对象的数据
+                                        reader.onload = function(evt){
+                                            img.src = evt.target.result;
+                                        };
+                                        reader.readAsDataURL(file.files[0]);
+                                    }
+                                </script>
+                                <div class="b54" id="in_5" style="color: #ac2925;"></div>
+                                <div class="b56">
+                                    <input id="zc" class="btn btn-default log" type="button" value="申请注册"/>
+                                </div>
+                                <div class="register">已有账号？
+                                    <a title="登录" href="login.html">立即登录</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="b511"></div>
+                        <div class="b51" id="b51">
+                            <div style="width: 100%; height: 50px;"></div>
+                            <img src="../img/timg.png" class="img-rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rest">
+        <div class="a" style="text-align: center;">
+            <span class="cm-button-span">此网站仅供学习无任何商业用途</span>
+            <span class="cm-button-span">黄山学院软件小组</span>
+        </div>
+    </div>
+    <script src="../js/head_message.js"></script>
+    <script>
+        // 用来提取数据
+        $(document).ready(function () {
+            var log_user_a = $("#user-name-label");
+
+            if (typeof (Storage) !== "undefined")
+            {
+                log_user_a.empty();
+                log_user_a.html(sessionStorage.getItem("username"));
+            }
+        });
+    </script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var a = 0, b = 0, c = 0, d = 0, e = 1;
+
+        // 昵称设置
+        $("#yhnc").blur(function () {
+            var yhname = $("#yhnc").val();
+            if (yhname == "")
+            {
+                $("#in_1").empty();
+                $("#in_1").css("font-size","15px");
+                $("#in_1").html("昵称不能为空");
+            }
+            else
+            {
+                var yh = {"name":yhname};
+
+                $.get("/name/repeat_1", yh, function (re) {
+                    if (re === true)
+                    {
+                        $("#in_1").empty();
+                        $("#in_1").css("font-size","20px");
+                        $("#in_1").html("&#10004");
+                        a = 1;
+                    }
+                    else
+                    {
+                        $("#in_1").empty();
+                        $("#in_1").css("font-size","15px");
+                        $("#in_1").html("昵称已被注册");
+                    }
+                })
+            }
+        });
+
+        // 密码设置
+        $("#mm").blur(function () {
+            var mmname = $("#mm").val();
+            if (mmname == "")
+            {
+                $("#in_2").empty();
+                $("#in_2").css("font-size","15px");
+                $("#in_2").html("密码不能为空");
+            }
+            else if (mmname.length < 8 || mmname.length > 16)
+            {
+                $("#in_2").empty();
+                $("#in_2").css("font-size","15px");
+                $("#in_2").html("密码必须在8-16位以内");
+            }
+            else
+            {
+                $("#in_2").empty();
+                $("#in_2").css("font-size","20px");
+                $("#in_2").html("&#10004");
+                b  = 1;
+            }
+        });
+
+        // 学号设置
+        $("#xh").blur(function () {
+            var xhname = $("#xh").val();
+            if (xhname === "" || xhname === null)
+            {
+                $("#in_3").empty();
+                $("#in_3").css("font-size","15px");
+                $("#in_3").html("学号不能为空");
+                return;
+            }
+            var reg = /\d+/;
+            var re = xhname.match(reg);
+            if (re!==null)
+            {
+                xhname = re[0];
+                $("#xh").val(re[0]);
+
+                if (xhname === "" || xhname === null)
+                {
+                    $("#in_3").empty();
+                    $("#in_3").css("font-size","15px");
+                    $("#in_3").html("学号不能为空");
+                }
+                else
+                {
+                    var xhn = {"son":xhname};
+
+                    $.get("/son/repeat_2", xhn, function (re) {
+                        if (re == true)
+                        {
+                            $("#in_3").empty();
+                            $("#in_3").css("font-size","20px");
+                            $("#in_3").html("&#10004");
+                            c = 1;
+                        }
+                        else
+                        {
+                            $("#in_3").empty();
+                            $("#in_3").css("font-size","15px");
+                            $("#in_3").html("学号已被注册,请填写自己的学号");
+                        }
+                    })
+                }
+            }
+            else
+            {
+                $("#xh").val(re);
+                $("#in_3").empty();
+                $("#in_3").css("font-size", "15px");
+                $("#in_3").html("学号只能为数字");
+                return;
+            }
+        });
+
+        // 联系方式设置
+        $("#lxfs").blur(function () {
+            var lxname = $("#lxfs").val();
+            if (lxname === "" || lxname === null)
+            {
+                $("#in_4").empty();
+                $("#in_4").css("font-size", "15px");
+                $("#in_4").html("联系方式不能为空");
+                return;
+            }
+            var reg = /\d+/;
+            var re = lxname.match(reg);
+            if (re!==null)
+            {
+                lxname = re[0];
+                $("#lxfs").val(re[0]);
+
+                if (lxname === "" || lxname === null)
+                {
+                    $("#in_4").empty();
+                    $("#in_4").css("font-size", "15px");
+                    $("#in_4").html("联系方式不能为空");
+                }
+                else if (lxname.length < 5 || lxname.length > 12)
+                {
+                    $("#in_4").empty();
+                    $("#in_4").css("font-size","15px");
+                    $("#in_4").html("请输入正确的QQ/手机号码，其为5-11位");
+                }
+                else
+                {
+                    $("#in_4").empty();
+                    $("#in_4").css("font-size","20px");
+                    $("#in_4").html("&#10004");
+                    d = 1;
+                }
+            }
+            else
+            {
+                $("#lxfs").val(re);
+                $("#in_4").empty();
+                $("#in_4").css("font-size", "15px");
+                $("#in_4").html("联系方式只能为数字");
+            }
+        });
+
+        // 注册提交
+        $("#zc").click(function () {
+            if (a === 0 || b === 0 || c === 0 || d === 0 || e === 0)
+            {
+                $("#in_5").empty();
+                $("#in_5").css("font-size","15px");
+                $("#in_5").html("请将信息填写完整");
+            }
+            else
+            {
+                var dat = {"Name":$("#yhnc").val(),"Son":$("#xh").val(),"QQ":$("#lxfs").val(),"Password":$("#mm").val()};
+                // console.log(dat);
+                $.post("/regist", dat, function (result) {
+
+                    if (result.result === "yes")
+                    {
+                        console.log(result);
+                        if (typeof (Storage) !== "undefined")
+                        {
+                            //储存
+                            var jsons = JSON.stringify(result);
+                            sessionStorage.setItem("head_message", jsons);
+
+                            var form = new FormData();
+                            var file = $("#file")[0].files[0];
+                            var Cid = result.Uid;
+                            form.append("file", file);
+                            form.append("Cid", Cid);
+                            form.append("SP", "h");
+                            $.ajax({
+                                url:"/upload",
+                                type:"post",
+                                data:form,
+                                processData:false,
+                                contentType:false,
+                                success:function(data){
+                                    if (data === true)
+                                    {
+                                        window.location.href ="../index.html";
+                                    }
+                                    else
+                                    {
+                                        $("#Tips").empty();
+                                        $("#Tips").css("font-size","15px");
+                                        $("#Tips").html("注册成功，头像设置失败，请稍后在个人中心设置");
+                                        window.location.href ="../index.html";
+                                    }
+                                }
+                            });
+
+                            // window.location.href ="index.html";
+                        }
+                    }
+                    else
+                    {
+                        $("#in_5").empty();
+                        $("#in_5").css("font-size","15px");
+                        $("#in_5").html("注册失败，请刷新页面重试");
+                    }
+                });
+            }
+        });
+
+    });
+</script>
+</html>

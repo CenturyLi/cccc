@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--<html>-->
+<!--<head>-->
+    <!--<meta charset=" utf-8">-->
+    <!--<meta name="author" content="http://www.softwhy.com/" />-->
+    <!--<title>蚂蚁部落</title>-->
+    <!--<style type="text/css">-->
+        <!--div{height:30px;}-->
+        <!--div a{-->
+            <!--display:block;-->
+            <!--width:100px;-->
+            <!--height:30px;-->
+            <!--text-align:center;-->
+            <!--line-height:30px;-->
+            <!--margin-left:5px;-->
+            <!--float:left;-->
+            <!--text-decoration:none;-->
+            <!--background-color:#CCC;-->
+            <!--position:relative;-->
+        <!--}-->
+        <!--div a span{-->
+            <!--width:120px;-->
+            <!--height:60px;-->
+            <!--display:none;-->
+            <!--background-color:#CC3;-->
+            <!--position:absolute;-->
+            <!--left:80px;-->
+            <!--top:30px;-->
+            <!--z-index:10-->
+        <!--}-->
+        <!--div a:hover span{display:block}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div>-->
+    <!--<a href="#">蚂蚁部落一<span>信息提示框</span></a>-->
+    <!--<a href="#">蚂蚁部落二<span>信息提示框</span></a>-->
+    <!--<a href="#">蚂蚁部落三<span>信息提示框</span></a>-->
+    <!--<a href="#">蚂蚁部落四<span>信息提示框</span></a>-->
+    <!--<a href="#">蚂蚁部落五<span>信息提示框</span></a>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--<html>-->
+    <!--<head>-->
+        <!--<script src="js/jquery-3.4.1.min.js"></script>-->
+    <!--</head>-->
+    <!--<body>-->
+    <!--<input type="file" onchange="c(this);"/>-->
+
+    <!--<script>-->
+        <!--function c(v)-->
+        <!--{-->
+            <!--var reader = new FileReader();-->
+            <!--reader.onload = function (evt) {-->
+                <!--$(v).after('<img src="' + evt.target.result + '" />');-->
+            <!--}-->
+            <!--reader.readAsDataURL(v.files[0]);-->
+        <!--}-->
+    <!--</script>-->
+    <!--<body>-->
+<!--</html>-->
+
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="file" onchange="show(this)"/>
+<img id="img" src="">
+<script>
+    function show(file){
+        var reader = new FileReader();	// 实例化一个FileReader对象，用于读取文件
+        var img = document.getElementById('img'); 	// 获取要显示图片的标签
+
+        //读取File对象的数据
+        reader.onload = function(evt){
+            img.width  =  "80";
+            img.height =  "80";
+            img.src = evt.target.result;
+        }
+        reader.readAsDataURL(file.files[0]);
+    }
+</script>
+</body>
+</html>
