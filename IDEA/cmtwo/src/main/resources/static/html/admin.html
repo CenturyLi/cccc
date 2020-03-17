@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<title>管理员后台</title>
+
+<!--可无视-->
+<link rel="stylesheet" type="text/css" href="../css/default.css">
+
+
+<!--必要样式-->
+<link href="../css/headeradmin.css" rel="stylesheet" />
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+	<div id="container">
+		<div class="a">
+			<div class="a1">
+				<div class="a11">
+					<ul class="ax">
+						<li class="a111">
+							<a class="label" title="首页" href="../index.html">首页</a>
+						</li>
+						<li class="a111">
+							<a class="label" title="我有建议" href="">我有建议</a>
+						</li>
+					</ul>
+				</div>
+				<div class="a11" id="rig">
+					<ul class="ax">
+						<li class="a111">
+							<a class="label" title="登出" href="../html/login.html">登出</a>
+						</li>
+						<li class="a111">
+							<a class="label" title="头像" href="">头像</a>
+						</li>
+						<li class="a111" id="set">
+							<a class="label" title="管理员" href="../html/add.html">管理员</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div id="left">
+			<ul class="mainmenu">
+				<li>
+					<img src="../images/user.png" alt="User icon" class="icon" />
+					<span>信息管理</span>
+				</li>
+				<ul class="submenu">
+					<div class="expand-triangle"></div>
+					<li><span><a href="../html/admin_user.html" target="R">用户信息</a></span></li>
+					<li><span><a href="../html/admin_commodity.html" target="R">商品信息</a></span></li>
+				</ul>
+				
+				<li>
+					<img src="../images/envelope.png" alt="Envelope icon" class="icon">
+					<span>消息管理</a></span>
+					<div class="messages">23</div>
+				</li>
+				<ul class="submenu">
+					<div class="expand-triangle"></div>
+					<li><span><a href="#" target="R">未读消息</a></span></li>
+					<li><span><a href="#" target="R">已读消息</a></span></li>
+					<li><span><a href="#" target="R">回收站</a></span></li>
+				</ul>
+				
+				<li>
+					<img src="../images/cog.png" alt="Cog icon" class="icon">
+					<span>订单信息</span>
+				</li>
+				<ul class="submenu">
+					<div class="expand-triangle"></div>
+					<li><span><a href="#" target="R">Basics</a></span></li>
+					<li><span><a href="#" target="R">Basics</a></span></li>
+					<li><span><a href="#" target="R">Basics</a></span></li>
+					<li><span><a href="#" target="R">Basics</a></span></li>
+					<li><span><a href="#" target="R">Basics</a></span></li>
+				</ul>
+				
+				<li><img src="../images/key.png" alt="Key icon" class="icon">
+                    <span>意见反馈</span>
+                </li>
+                <ul class="submenu">
+                    <div class="expand-triangle"></div>
+                    <li><span><a href="#" target="R">Basics</a></span></li>
+                    <li><span><a href="#" target="R">Basics</a></span></li>
+                    <li><span><a href="#" target="R">Basics</a></span></li>
+                </ul>
+
+			</ul>
+		</div>
+		
+		<div id="middle" name="R" >
+            <div id="RRR" align="Center"><iframe name="R" frameborder="0" scrolling="no" width="100%" height="100%"></iframe></div>
+		</div>
+	
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/script.js"></script>
+
+	</div>
+</body>
+</html>

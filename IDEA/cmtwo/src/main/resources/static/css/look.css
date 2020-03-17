@@ -1,0 +1,117 @@
+
+.cm-middle{
+    width: 100%;
+    height: 638px;
+}
+
+.cm-middle-son{
+    margin: 0 auto;
+    padding: 0;
+    width: 1080px;
+    height: 488px;
+}
+
+.cm-middle-all{
+    width: 50%;
+    height: 100%;
+
+    float: left;
+}
+
+.cm-middle-left{
+    margin: 0 20px;
+    width: 500px;
+    height: 380px;
+
+    /*border: 3px solid rgba(255, 255, 255, 0.5);*/
+}
+
+.cm-middle-left-img{
+    width: 500px;
+    height: 380px;
+}
+
+.cm-middle-right{
+    margin: 0 50px;
+    width: 440px;
+    height: 488px;
+}
+
+.cm-middle-right-name{
+    font-size: 22px;
+    line-height: 31px;
+    color: #333;
+    display: block;
+    font-weight: 700;
+    font-family: "Microsoft YaHei", serif;
+}
+
+.cm-middle-right-npic{
+    margin-top: 12px;
+    margin-bottom: 8px;
+
+    width: 100%;
+    height: 28px;
+}
+
+.cm-middle-right-npic-1{
+    width: 80px;
+    height: 21px;
+    color: #333;
+    float: left;
+
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: tahoma, arial, simsun, serif;
+}
+
+.cm-middle-right-npic-2{
+    font-size: 24px;
+    line-height: 24px;
+    font-family: Arial, Verdana, serif;
+    padding-right: 2px;
+    color: #656565;
+    float: left;
+}
+
+.cm-middle-right-npic-3{
+    font-size: 24px;
+    line-height: 24px;
+    font-family: Verdana, serif;
+    color: #f40;
+    float: left;
+}
+
+.cm-middle-right-pic{
+    margin-bottom: 10px;
+
+    width: 100%;
+    height: 21px;
+}
+
+.cm-middle-right-pic-1{
+    font-family: Arial, Verdana, serif;
+    padding-right: 2px;
+    color: #656565;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: -webkit-match-parent;
+    display: inline;
+}
+
+.cm-middle-right-pic-2{
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Verdana, serif;
+    color: #333;
+    display: inline;
+}
+
+.cm-middle-right-intor{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    font-family: "Microsoft YaHei", serif;
+    color: #3b3b3b;
+}
